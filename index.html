@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="html" href="highscore.html">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- starting page -->
+    <div class="container">
+        <div class="row1">
+            <div class="col-md-8">
+                <div class="jumbotron">
+                    <h1 class="display-4">Geography Quiz</h1>
+                    <p class="lead">5 questions, 60 seconds - time deducted for wrong answers!</p>
+                    <hr class="my-4">
+                    <p>Put your knowledge to the test!</p>
+                    <a id="start-btn" class="btn btn-primary btn-lg" href="#" role="button">Start</a>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- question container -->
+        <div class="question-container" class="hide">
+            <div class="row2">
+                <div class="col-md-8">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Question</h1>
+                        <p id="questionTitle" class="lead">Place Holder</p>
+                        <hr class="my-4">
+                        <button id="button1" type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button id="button2" type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button id="button3" type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button id="button4" type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <br>
+                        <h3>Seconds left: <span id="timer">60</span>></span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- initals and score box -->
+        <div class="row3">
+            <div class="col-md-4">
+                <div class="jumbotron">
+                    <div class="endgame">
+                        <form>
+                            <H1>Your Initials</H1>
+                            <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+   
+
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="score.js"></script>
+
+</body>
+
+</html>
