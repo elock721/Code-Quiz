@@ -10,7 +10,6 @@ var buttonThree = document.getElementById('button3')
 var buttonFour = document.getElementById('button4')
 var questionTitle = document.getElementById('questionTitle')
 var gameOver = document.querySelector('.row3')
-var finalScore = 
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,7 +61,7 @@ function checkAnswer(event) {
     var answer = questions[currentQuestionIndex].answer
     // alert(event.target.innerHTML)
     if (answer === event.target.innerHTML) {
-        alert("Correct!")
+        alert("Correct!");
         
     } else{
         alert("Wrong!")
@@ -81,6 +80,7 @@ function checkAnswer(event) {
 function endGame() {
     questContainer.style.display = "none";
     gameOver.style.display = "block";
+    
     
 }
 
