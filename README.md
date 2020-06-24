@@ -34,6 +34,8 @@ Once the end of the question array has been reached, the quiz will end
 
 The end game function will hide the questionContainer and display the end of the game jumbotron complete with score and an initals text box for logging high score
 
+High Score will then be displayed with initals
+
 
 
 

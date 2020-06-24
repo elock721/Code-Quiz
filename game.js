@@ -10,6 +10,11 @@ var buttonThree = document.getElementById('button3')
 var buttonFour = document.getElementById('button4')
 var questionTitle = document.getElementById('questionTitle')
 var gameOver = document.querySelector('.row3')
+var feedBack = document.querySelector('#feedback')
+var score = 0; 
+var endScore = document.querySelector('#endScore');
+var submitBtn = document.getElementById('submitBtn');
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,15 +61,18 @@ buttonTwo.addEventListener('click', checkAnswer);
 buttonThree.addEventListener('click', checkAnswer);
 buttonFour.addEventListener('click', checkAnswer);
 
-// checks for correct answer
+// checks answer
 function checkAnswer(event) {
     var answer = questions[currentQuestionIndex].answer
-    // alert(event.target.innerHTML)
+    // provided feeback if answer is correct
     if (answer === event.target.innerHTML) {
-        alert("Correct!");
-        
+        feedBack.textContent = "Correct!";
+        score++;
+        clearFeedBack(); 
+    // provided feedback if answer is wrong
     } else{
-        alert("Wrong!")
+        feedBack.textContent = "Wrong!";
+        clearFeedBack(); 
         timeLeft-=10
     }
     currentQuestionIndex++
@@ -78,9 +86,30 @@ function checkAnswer(event) {
 }
 // prompts initals and shows score
 function endGame() {
+    endScore.textContent = score; 
     questContainer.style.display = "none";
     gameOver.style.display = "block";
     
+    
+}
+// click event 
+submitBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    setScore();
+
+}) 
+// stores in local storage
+function setScore() {
+    localStorage.setItem("highscore", score);
+    localStorage.setItem("highscoreName",  document.getElementById('exampleInputName1').value);
+    window.location.replace('highscore.html')
+    }
+
+// clears answer feedback 
+function clearFeedBack(){
+    setTimeout(function(){
+        feedBack.textContent = "";
+    },1000) 
     
 }
 
